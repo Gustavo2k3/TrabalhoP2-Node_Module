@@ -1,0 +1,16 @@
+<div class="panel">
+  <h1>Lista de Estados</h1>
+  <ul>
+    <li *ngFor="let estado of estados">
+      {{ estado.nome }}
+      <button (click)="deleteEstado(estado.nome)">Excluir</button>
+    </li>
+  </ul>
+
+  <input [(ngModel)]="novoEstado" placeholder="Novo estado" type="text" />
+  <button (click)="addEstado()">Adicionar</button>
+</div>
+
+<div class="footer-panel">
+  Desenvolvido por Gustavo de Almeida Sousa
+</div>
